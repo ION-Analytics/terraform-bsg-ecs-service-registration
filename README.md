@@ -7,7 +7,7 @@ This module provisions infrastructure resources connecting a ECS service created
 * Route 53 DNS Record
 * ALB Listener Rule
 * ALB Target Group with Health Check
-* Consul Service Registration for BSG internal or external address routing(Optional) 
+* Consul Service Registration for BSG internal or external address routing (Optional) .
 
 *NOTE: The Consul registration and configs are used by BSG NGINX to set up the necessary ACL and LB configuration for internal and external networking. Migration to Ion's networking and routing patterns may be required in the future, but this is out of scope for the cdflow adoption initiative.*
 
