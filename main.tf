@@ -122,6 +122,11 @@ resource "consul_service" "service_node" {
     "cert-backstop.solutions"
   ]
 
+  # Depends on is required because if the consul record is updated before the DNS
+  # record is created then the hashi-lb servers cannot load nginx properly due to 
+  # not being able to find the IP address for the upstream service
+
+  depends_on = [
+    aws_route53_record.dns_record
+  ]
 }
-
-
